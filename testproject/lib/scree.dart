@@ -16,6 +16,7 @@ class _baruState extends State<baru> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('MY FIRST APP'),
       ),
       body: Column(
