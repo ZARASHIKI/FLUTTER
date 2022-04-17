@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class baru extends StatefulWidget {
   const baru({Key? key}) : super(key: key);
@@ -10,28 +11,58 @@ class baru extends StatefulWidget {
 }
 
 class _baruState extends State<baru> {
-  int _selectedIndex = 0;
-  PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text('MY FIRST APP'),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(50),
+                bottomLeft: Radius.circular(50))),
+        bottom: PreferredSize(
+            preferredSize: Size.fromHeight(250),
+            child: Column(
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 100,
+                  backgroundImage: AssetImage('assets/me.png'),
+                ),
+                Container(
+                  height: 15,
+                ),
+                Container(
+                    height: 30,
+                    child: Text("AGUS YUSUF",
+                        style: GoogleFonts.oswald(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold))),
+                Container(
+                    child: Text(
+                  "DESTROYER",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontWeight: FontWeight.bold),
+                )),
+                Container(
+                  height: 30,
+                )
+              ],
+            )),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          Container(
+            height: 30,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                child: Text('KONNICHIWA MY NAME IS'),
-              ),
-              Container(
+                height: 30,
                 child: Text(
-                  ' AGUSYUSUF',
-                  style: TextStyle(color: Colors.blueAccent),
+                  'ABOUT ME',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -40,59 +71,141 @@ class _baruState extends State<baru> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                height: 30,
-                child: Text('WELCOME TO MY FIRST APP'),
+                  width: 400,
+                  child: Text(
+                    'HI currently iam studying at the faculty of engineering and informatics at the Universitas Pendidikan Nasional.my main interest is learning programming',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 216, 212, 212),
+                    ),
+                  )),
+              Container(
+                width: 200,
+                padding: EdgeInsets.only(bottom: 13),
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                            color: Color.fromARGB(255, 216, 212, 212),
+                            width: 2))),
+              ),
+              Container(
+                height: 15,
+              ),
+              Container(
+                height: 20,
+                child: Text(
+                  "Skills",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Container(
-                        child: Text(
-                          'REGISTER',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                        padding: EdgeInsets.all(7.0),
-                        margin: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: Color.fromARGB(255, 216, 211, 211),
-                        ),
-                      ),
-                      Container(
-                        child: Text(
-                          'LOGIN',
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                        ),
-                        padding: EdgeInsets.all(7.0),
-                        margin: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: Color.fromARGB(255, 1, 160, 252),
-                        ),
-                      )
-                    ],
+                  Text("5"),
+                  Icon(
+                    Icons.star_rate,
+                    size: 17,
+                    color: Colors.orange,
+                  ),
+                  SizedBox(
+                    width: 42,
+                  ),
+                  Text("4"),
+                  Icon(
+                    Icons.star_rate,
+                    size: 17,
+                    color: Colors.orange,
+                  ),
+                  SizedBox(
+                    width: 42,
+                  ),
+                  Text("5"),
+                  Icon(
+                    Icons.star_rate,
+                    size: 17,
+                    color: Colors.orange,
+                  ),
+                  SizedBox(
+                    width: 42,
+                  ),
+                  Text("4"),
+                  Icon(
+                    Icons.star_rate,
+                    size: 17,
+                    color: Colors.orange,
                   )
+                ],
+              ),
+              Column(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "JAVA",
+                    style: TextStyle(color: Color.fromARGB(255, 216, 212, 212)),
+                  ),
+                  SizedBox(width: 28),
+                  Text(
+                    "FLUTTER",
+                    style: TextStyle(color: Color.fromARGB(255, 216, 212, 212)),
+                  ),
+                  SizedBox(width: 28),
+                  Text("SQL",
+                      style:
+                          TextStyle(color: Color.fromARGB(255, 216, 212, 212))),
+                  SizedBox(width: 28),
+                  Text("ENGLISH",
+                      style:
+                          TextStyle(color: Color.fromARGB(255, 216, 212, 212)))
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Container(
+                    width: 200,
+                    padding: EdgeInsets.only(bottom: 13),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color.fromARGB(255, 216, 212, 212),
+                                width: 2))),
+                  ),
+                  Container(
+                    height: 15,
+                  ),
+                  Container(
+                      height: 35,
+                      child: Text(
+                        "FIND ME ON",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  CircleAvatar(
+                    radius: 15,
+                    backgroundImage: AssetImage('assets/face.png'),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  CircleAvatar(
+                    radius: 16,
+                    backgroundImage: AssetImage('assets/line.png'),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  CircleAvatar(
+                      radius: 16,
+                      backgroundImage: AssetImage('assets/wa2.png')),
                 ],
               )
             ],
           ),
         ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'HOME',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Akun'),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromARGB(255, 187, 11, 26),
-        unselectedItemColor: Color.fromARGB(255, 0, 0, 0),
       ),
     );
   }
