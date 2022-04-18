@@ -73,7 +73,7 @@ class _baruState extends State<baru> {
               Container(
                   width: 400,
                   child: Text(
-                    'HI currently iam studying at the faculty of engineering and informatics at the Universitas Pendidikan Nasional.my main interest is learning programming',
+                    'HI currently iam studying at the faculty of engineering and informatics at the Universitas Pendidikan Nasional,my main interest is learning programming',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color.fromARGB(255, 216, 212, 212),
@@ -199,8 +199,10 @@ class _baruState extends State<baru> {
                     width: 20,
                   ),
                   CircleAvatar(
-                      radius: 16,
-                      backgroundImage: AssetImage('assets/wa2.png')),
+                    radius: 17,
+                    backgroundImage: AssetImage('assets/wa2.png'),
+                    backgroundColor: Color.fromARGB(0, 255, 255, 255),
+                  )
                 ],
               )
             ],
