@@ -54,9 +54,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/me.png
-    - assets/face.png
-    - assets/line.png
-    - assets/wa2.png
+   
     
   # To add assets to your application, add an assets section, like this:
   # assets:
