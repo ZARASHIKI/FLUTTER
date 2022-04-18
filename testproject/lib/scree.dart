@@ -184,24 +184,23 @@ class _baruState extends State<baru> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  CircleAvatar(
-                    radius: 15,
-                    backgroundImage: AssetImage('assets/face.png'),
+                  Icon(
+                    Icons.facebook,
+                    color: Colors.blue,
                   ),
                   SizedBox(
                     width: 20,
                   ),
-                  CircleAvatar(
-                    radius: 16,
-                    backgroundImage: AssetImage('assets/line.png'),
+                  Icon(
+                    Icons.whatsapp,
+                    color: Colors.blue,
                   ),
                   SizedBox(
                     width: 20,
                   ),
-                  CircleAvatar(
-                    radius: 17,
-                    backgroundImage: AssetImage('assets/wa2.png'),
-                    backgroundColor: Color.fromARGB(0, 255, 255, 255),
+                  Icon(
+                    Icons.telegram,
+                    color: Colors.blue,
                   )
                 ],
               )
